@@ -1,39 +1,50 @@
 {
-  "name": "squibble-says",
+  "name": "acm-ucr-static-website",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "format": "npx prettier --write .",
+    "check": "npx prettier --check .",
+    "eslint": "npx eslint -c eslint.config.mjs",
+    "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@auth/mongodb-adapter": "^3.8.0",
+    "@tanstack/react-query": "~5.53.3",
+    "lucide-react": "~0.417.0",
+    "mongodb": "^6.14.2",
+    "next": "^15.1.6",
+    "next-auth": "^5.0.0-beta.25",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@eslint/js": "~9.8.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@tanstack/eslint-plugin-query": "~5.53.0",
+    "@types/node": "~22.1.0",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "@typescript-eslint/eslint-plugin": "~8.0.0",
+    "@typescript-eslint/parser": "~8.0.0",
+    "eslint": "~9.8.0",
+    "eslint-config-prettier": "~9.1.0",
+    "eslint-plugin-prettier": "~5.2.1",
+    "eslint-plugin-react": "~7.35.0",
+    "globals": "~15.9.0",
+    "husky": "~9.1.4",
+    "postcss": "~8.4.40",
+    "prettier": "~3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.5.4",
+    "typescript-eslint": "~8.0.0"
+  },
+  "overrides": {
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3"
   }
 }
